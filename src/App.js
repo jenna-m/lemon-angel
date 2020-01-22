@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.scss';
 // Import components
 import Header from './components/header';
@@ -10,23 +11,31 @@ import Contact from './components/contact';
 class App extends React.Component {
 	render() {
 		return (
-			<div className="container">
-				<Header />
-				<Landing />
-				<About />
-				<Portfolio />
-				<Contact />
-				<div className="footer">
-					© Elizabeth Garcia 2020 | Web Design by{' '}
-					<a
-						href="https://jennamichaels.dev"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Jenna Michaels
-					</a>
+			<Router>
+				<div className="container">
+					<Header />
+					<Landing />
+					<section id="about">
+						<About />
+					</section>
+					<section id="portfolio">
+						<Portfolio />
+					</section>
+					<section id="contact">
+						<Contact />
+					</section>
+					<div className="footer">
+						© Elizabeth Garcia 2020 | Web Design by{' '}
+						<a
+							href="https://jennamichaels.dev"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Jenna Michaels
+						</a>
+					</div>
 				</div>
-			</div>
+			</Router>
 		);
 	}
 }
