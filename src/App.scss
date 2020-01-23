@@ -57,6 +57,25 @@ h1 {
 	img {
 		max-width: 45%;
 	}
+	.landing-img-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 75%;
+		padding-top: 75px;
+		img {
+			max-width: 90px;
+			border-radius: 360px;
+			border: 1px solid $grey;
+			-webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+			filter: grayscale(100%); /* FF 35+ */
+			transition: filter 0.35s ease-in-out;
+		}
+		img:hover {
+			-webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+			filter: grayscale(0%); /* FF 35+ */
+		}
+	}
 }
 
 .about-container {
