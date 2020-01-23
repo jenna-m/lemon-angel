@@ -5,16 +5,21 @@ class About extends React.Component {
 	render() {
 		return (
 			<div className="about-container">
-				<h1>About</h1>
-				<img
-					src={aboutImg}
-					alt="Elizabeth Garcia in a chef's uniform"
-				/>
-				<p>
-					Elizabeth García, <span>CCSF Alumna</span>, is a{' '}
-					<span>pastry chef</span> currently based in{' '}
-					<span>San Diego, CA</span>.
-				</p>
+				<div className="section-title">
+					<h1>About</h1>
+				</div>
+				<div className="section-content">
+					<img
+						className="section-img"
+						id="about-img"
+						src={aboutImg}
+						alt="Elizabeth Garcia in a chef's uniform"
+					/>
+					<p>
+						Elizabeth García, CCSF Alumna, is a pastry chef based in
+						San Diego, CA.
+					</p>
+				</div>
 			</div>
 		);
 	}

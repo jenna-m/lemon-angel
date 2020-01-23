@@ -5,12 +5,18 @@ class Contact extends React.Component {
 	render() {
 		return (
 			<div className="contact-container">
-				<h1>Contact</h1>
-				<img
-					src={contactImg}
-					alt="Elizabeth forming dough into loaves"
-				/>
-				<p>hello@lemonangel.net</p>
+				<div className="section-title">
+					<h1>Contact</h1>
+				</div>
+				<div className="section-content">
+					<img
+						className="section-img"
+						id="contact-img"
+						src={contactImg}
+						alt="Elizabeth forming dough into loaves"
+					/>
+					<p>hello@lemonangel.net</p>
+				</div>
 			</div>
 		);
 	}
