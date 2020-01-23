@@ -1,10 +1,11 @@
 import React from 'react';
+import logo from '../images/logo.png';
 
 class Landing extends React.Component {
 	render() {
 		return (
 			<div className="landing-container">
-				<h1>Landing</h1>
+				<img src={logo} alt="Lemon Angel Logo" />
 			</div>
 		);
 	}
