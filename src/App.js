@@ -15,15 +15,18 @@ class App extends React.Component {
 				<div className="container">
 					<Header />
 					<Landing />
-					<section id="about">
-						<About />
-					</section>
-					<section id="portfolio">
-						<Portfolio />
-					</section>
-					<section id="contact">
-						<Contact />
-					</section>
+					<div id="gradient">
+						<section id="about">
+							<About />
+						</section>
+						<section id="portfolio">
+							<Portfolio />
+						</section>
+						<section id="contact">
+							<Contact />
+						</section>
+					</div>
+
 					<div className="footer">
 						© Elizabeth Garcia 2020 | Design by{' '}
 						<a

@@ -57,16 +57,62 @@ $lemon: #f5ed42;
 
 body {
 	margin: 0;
+	background-color: $white;
 	font-family: $cabin;
 	font-size: 1em;
 }
 
+// sections with uniform gradient background
+#gradient {
+	background: linear-gradient(120deg, #ff8aa6, #abcdca, #db9ec1);
+	background-size: 600% 600%;
+
+	-webkit-animation: AnimationName 20s ease infinite;
+	-moz-animation: AnimationName 20s ease infinite;
+	animation: AnimationName 20s ease infinite;
+
+	@-webkit-keyframes AnimationName {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 51%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+	@-moz-keyframes AnimationName {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 51%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+	@keyframes AnimationName {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 51%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+}
+
 h1 {
 	font-family: $abel;
-	color: $black;
+	color: $white;
 	font-size: 2rem;
 	letter-spacing: 6px;
 	@include tablet() {
+		margin: 0;
 		transform: rotate(-90deg);
 		font-size: 2.85rem;
 		letter-spacing: 8px;
@@ -93,20 +139,20 @@ p {
 	}
 }
 
+// Styling for section content width
+.section-content {
+	width: 80%;
+}
+
 // Styling for circular section images
 .section-img {
 	margin: 0 100px;
 	width: 250px;
 	border-radius: 360px;
+	border: 2px solid $grey;
 	@include mobile() {
 		width: 175px;
 	}
-}
-#about-img {
-	border: 2px solid $pink;
-}
-#contact-img {
-	border: 2px solid $lilac;
 }
 
 // Header/Navigation
@@ -201,7 +247,6 @@ p {
 	display: flex;
 	align-items: center;
 	@include containerSize();
-	background-color: rgba(255, 178, 166, 0.5);
 	@include mobile() {
 		@include flex-direction(column);
 		align-content: center;
@@ -210,7 +255,11 @@ p {
 	p {
 		width: 50%;
 		@include mobile() {
-			width: 60%;
+			width: 70%;
+			text-align: center;
+		}
+		@include tablet() {
+			width: 70%;
 			text-align: center;
 		}
 	}
@@ -222,10 +271,10 @@ p {
 			@include flex-direction(column);
 			align-items: center;
 		}
-		/* @include tablet() {
+		@include tablet() {
 			@include flex-direction(column);
 			align-items: center;
-		} */
+		}
 	}
 }
 
@@ -234,7 +283,6 @@ p {
 	display: flex;
 	align-items: center;
 	@include containerSize();
-	background-color: rgba(171, 205, 202, 0.5);
 	@include mobile() {
 		@include flex-direction(column);
 		align-content: center;
@@ -247,7 +295,6 @@ p {
 	display: flex;
 	align-items: center;
 	@include containerSize();
-	background-color: rgba(204, 179, 179, 0.5);
 	@include mobile() {
 		@include flex-direction(column);
 		align-content: center;
