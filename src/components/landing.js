@@ -19,7 +19,7 @@ class Landing extends React.Component {
 					/>
 					<img
 						src={img3}
-						alt="Cheesecake Brownies with Colorful Sprinkles"
+						alt="Strawberry on Top of Decorated Cupcake"
 					/>
 					<img
 						src={img4}
@@ -27,7 +27,7 @@ class Landing extends React.Component {
 					/>
 					<img
 						src={img5}
-						alt="Strawberry on Top of Decorated Cupcake"
+						alt="Cheesecake Brownies with Colorful Sprinkles"
 					/>
 				</div>
 			</div>
