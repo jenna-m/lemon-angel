@@ -25,7 +25,7 @@ class App extends React.Component {
 						<Contact />
 					</section>
 					<div className="footer">
-						© Elizabeth Garcia 2020 | Web Design by{' '}
+						© Elizabeth Garcia 2020 | Design by{' '}
 						<a
 							href="https://jennamichaels.dev"
 							target="_blank"
