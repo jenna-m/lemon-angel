@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Cabin&display=swap');
+
+// h1 font
+$abel: 'Abel', sans-serif;
+$cabin: 'Cabin', 'Arial', sans-serif;
+
 // Color variables
 $white: #fff;
 $black: #0d0f0c;
@@ -7,19 +13,14 @@ $blue: #abcdca;
 $lilac: #ccb3b3;
 $lemon: #f5ed42;
 
-// h1 font
-$abel: 'Abel', sans-serif;
-// body font
-$cabin: 'Cabin', 'Arial', sans-serif;
-
 body {
 	margin: 0;
-	font: $cabin;
+	font-family: $cabin;
 	font-size: 1em;
 }
 
 h1 {
-	font: $abel;
+	font-family: $abel;
 	color: $black;
 	font-size: 3rem;
 	letter-spacing: 10px;
@@ -95,7 +96,7 @@ h1 {
 	p {
 		width: 43%;
 		color: $white;
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 	span {
 		font-weight: 700;
@@ -128,7 +129,7 @@ h1 {
 	}
 	p {
 		color: $grey;
-		font-size: 2rem;
+		font-size: 2.5rem;
 		font-weight: 700;
 		letter-spacing: 5px;
 	}
