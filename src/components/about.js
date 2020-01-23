@@ -12,7 +12,7 @@ class About extends React.Component {
 				/>
 				<p>
 					Elizabeth García, <span>CCSF Alumna</span>, is a{' '}
-					<span>pastry chef</span> currently located in{' '}
+					<span>pastry chef</span> currently based in{' '}
 					<span>San Diego, CA</span>.
 				</p>
 			</div>
