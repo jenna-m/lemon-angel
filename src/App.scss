@@ -1,4 +1,4 @@
-// media query variables and mixins
+// media query variables & mixins
 $mobile-width: 480px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -35,15 +35,14 @@ $desktop-width: 1024px;
 	}
 }
 
-// container width & height mixins
+// container width & height mixin
 @mixin containerSize {
-	width: 100%;
+	width: 80%;
 	height: 100vh;
 }
 
 // import Google Fonts
-@import url('https://fonts.googleapis.com/css?family=Abel|Cabin&display=swap');
-$abel: 'Abel', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
 $cabin: 'Cabin', 'Arial', sans-serif;
 
 // Color variables
@@ -62,7 +61,7 @@ body {
 	font-size: 1em;
 }
 
-// sections with uniform gradient background
+// uniform gradient background for About, Portfolio, and Contact sections
 #gradient {
 	background: linear-gradient(120deg, #ff8aa6, #abcdca, #db9ec1);
 	background-size: 600% 600%;
@@ -106,56 +105,37 @@ body {
 	}
 }
 
-h1 {
-	font-family: $abel;
-	color: $white;
-	font-size: 2rem;
-	letter-spacing: 6px;
-	@include tablet() {
-		margin: 0;
-		transform: rotate(-90deg);
-		font-size: 2.85rem;
-		letter-spacing: 8px;
-	}
-	@include desktop() {
-		transform: rotate(-90deg);
-		font-size: 3rem;
-		letter-spacing: 10px;
-	}
-}
-
 p {
 	color: $white;
-	font-size: 1.45rem;
+	font-size: 1.4rem;
 	font-weight: 700;
 	letter-spacing: 1px;
+	text-align: center;
 	@include tablet() {
-		font-size: 1.75rem;
+		font-size: 1.7rem;
 		letter-spacing: 3px;
 	}
 	@include desktop() {
-		font-size: 2rem;
+		font-size: 1.95rem;
 		letter-spacing: 5px;
 	}
 }
 
-// Styling for section content width
-.section-content {
-	width: 80%;
-}
-
 // Styling for circular section images
 .section-img {
-	margin: 0 100px;
-	width: 250px;
+	max-width: 250px;
+	min-width: 10%;
 	border-radius: 360px;
-	border: 2px solid $grey;
+	border: 1.5px solid $grey;
 	@include mobile() {
 		width: 175px;
 	}
+	@include desktop() {
+		margin-right: 100px;
+	}
 }
 
-// Header/Navigation
+// Fixed Header/Navigation
 .header-container {
 	display: flex;
 	align-items: center;
@@ -196,18 +176,53 @@ p {
 	display: flex;
 	@include flex-direction(column);
 	align-items: center;
-	@include containerSize();
-	padding-top: 150px;
+	width: 100%;
+	height: 100vh;
+	// logo styling
 	img {
 		width: 75%;
+		padding-top: 240px;
 		@include tablet() {
 			width: 65%;
+			padding-top: 300px;
 		}
 		@include desktop() {
 			width: 45%;
+			padding-top: 175px;
 		}
 	}
-	.landing-img-container {
+}
+
+// About Section
+.about-container {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	@include containerSize();
+	@include mobile() {
+		@include flex-direction(column);
+		align-content: center;
+		padding-top: 150px;
+	}
+	@include tablet() {
+		@include flex-direction(column);
+		align-content: center;
+		padding-top: 250px;
+	}
+}
+
+// Portfolio Section
+.portfolio-container {
+	display: flex;
+	align-items: center;
+	@include containerSize();
+	@include mobile() {
+		@include flex-direction(column);
+		align-content: center;
+		padding-top: 100px;
+	}
+	// portfolio image styling
+	.portfolio-img-container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -230,7 +245,7 @@ p {
 				width: 65px;
 			}
 			border-radius: 360px;
-			border: 1px solid rgba(245, 237, 66, 0.5);
+			border: 0.5px solid $grey;
 			-webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
 			filter: grayscale(100%); /* FF 35+ */
 			transition: filter 0.35s ease-in-out;
@@ -242,77 +257,21 @@ p {
 	}
 }
 
-// About Section
-.about-container {
-	display: flex;
-	align-items: center;
-	@include containerSize();
-	@include mobile() {
-		@include flex-direction(column);
-		align-content: center;
-		padding-top: 80px;
-	}
-	p {
-		width: 50%;
-		@include mobile() {
-			width: 70%;
-			text-align: center;
-		}
-		@include tablet() {
-			width: 70%;
-			text-align: center;
-		}
-	}
-	.section-content {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		@include mobile() {
-			@include flex-direction(column);
-			align-items: center;
-		}
-		@include tablet() {
-			@include flex-direction(column);
-			align-items: center;
-		}
-	}
-}
-
-// Portfolio Section
-.portfolio-container {
-	display: flex;
-	align-items: center;
-	@include containerSize();
-	@include mobile() {
-		@include flex-direction(column);
-		align-content: center;
-		padding-top: 80px;
-	}
-}
-
 // Contact Section
 .contact-container {
 	display: flex;
 	align-items: center;
+	margin: 0 auto;
 	@include containerSize();
 	@include mobile() {
 		@include flex-direction(column);
 		align-content: center;
-		padding-top: 80px;
+		padding-top: 150px;
 	}
-	.section-content {
-		display: flex;
-		@include mobile() {
-			@include flex-direction(column);
-			align-items: center;
-		}
-	}
-	p {
-		width: 50%;
-		@include mobile() {
-			width: 90%;
-			text-align: center;
-		}
+	@include tablet() {
+		@include flex-direction(column);
+		align-content: center;
+		padding-top: 250px;
 	}
 }
 
