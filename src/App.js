@@ -19,23 +19,27 @@ class App extends React.Component {
 						<section id="about">
 							<About />
 						</section>
+						<div className="separator"></div>
 						<section id="portfolio">
 							<Portfolio />
 						</section>
+						<div className="separator"></div>
 						<section id="contact">
 							<Contact />
 						</section>
 					</div>
 
 					<div className="footer">
-						© Elizabeth Garcia 2020 | Design by{' '}
-						<a
-							href="https://jennamichaels.dev"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Jenna Michaels
-						</a>
+						<p>
+							© Elizabeth García 2020 | Design by{' '}
+							<a
+								href="https://jennamichaels.dev"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Jenna Michaels
+							</a>
+						</p>
 					</div>
 				</div>
 			</Router>
