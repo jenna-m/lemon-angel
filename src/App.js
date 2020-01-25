@@ -13,25 +13,30 @@ class App extends React.Component {
 		return (
 			<Router>
 				<div className="container">
-					<Header />
-					<Landing />
-					<div id="gradient">
-						<section id="about">
-							<About />
-						</section>
-						<div className="separator"></div>
-						<section id="portfolio">
-							<Portfolio />
-						</section>
-						<div className="separator"></div>
-						<section id="contact">
-							<Contact />
-						</section>
-					</div>
+					<header role="banner">
+						<Header />
+					</header>
+					<main role="main">
+						<Landing />
+						<div id="gradient">
+							<section id="about">
+								<About />
+							</section>
+							<div className="separator"></div>
+							<section id="portfolio">
+								<Portfolio />
+							</section>
+							<div className="separator"></div>
+							<section id="contact">
+								<Contact />
+							</section>
+						</div>
+					</main>
 
-					<div className="footer">
+					<footer role="contentinfo">
+						<p>© Elizabeth García 2020</p>
 						<p>
-							© Elizabeth García 2020 | Design by{' '}
+							Design & Development by{' '}
 							<a
 								href="https://jennamichaels.dev"
 								target="_blank"
@@ -40,7 +45,7 @@ class App extends React.Component {
 								Jenna Michaels
 							</a>
 						</p>
-					</div>
+					</footer>
 				</div>
 			</Router>
 		);
