@@ -37,6 +37,7 @@ class Header extends React.Component {
 		return (
 			<div className="header-container">
 				<nav
+					role="navigation"
 					className={classnames('navbar', {
 						'navbar--hidden': !this.state.visible
 					})}
