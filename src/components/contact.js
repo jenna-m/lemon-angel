@@ -5,6 +5,7 @@ class Contact extends React.Component {
 	render() {
 		return (
 			<div className="contact-container">
+				<h1 className="accessible-header">Contact</h1>
 				<div>
 					<img
 						className="section-img"
@@ -13,15 +14,15 @@ class Contact extends React.Component {
 						alt="Elizabeth forming dough into loaves"
 					/>
 				</div>
-				<div>
-					<p>Get in touch:</p>
+				<div id="contact-text">
+					<p>For all inquiries</p>
+					<div id="contact-phone">
+						<p>(123) 456-7890</p>
+					</div>
 					<div id="contact-email">
 						<a href="mailto:hello@lemonangel.net">
 							hello@lemonangel.net
 						</a>
-					</div>
-					<div id="contact-phone">
-						<p>(xxx) xxx - xxxx</p>
 					</div>
 				</div>
 			</div>
