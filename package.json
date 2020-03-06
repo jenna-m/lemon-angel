@@ -1,6 +1,6 @@
 {
 	"name": "lemon-angel",
-	"homepage": "http://lemonangel.net",
+	"homepage": "./",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
